@@ -1,0 +1,19 @@
+algoritmo "Até"
+// Função : Até que o numero digitado seja zero
+// Autor : Marconys
+// Data : 24/01/2022
+// Seção de Declarações 
+var
+a, b: inteiro
+inicio
+repita
+escreval("Digite o valor de A")
+leia(a)
+escreval("Digite o valor de B")
+leia(b)
+se( a > 0) e (b > 0) entao
+escreval("A soma de A + B é:",a + b)
+fimse
+ate (a < 1) ou (b < 1)
+fimrepita
+fimalgoritmo
