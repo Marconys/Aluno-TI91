@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associadas a um assembly.
-[assembly: AssemblyTitle("Matriz_Preenchimento_Somar_Linhas")]
+[assembly: AssemblyTitle("Matriz_Preencher_e_Somar_Elementos")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Matriz_Preenchimento_Somar_Linhas")]
+[assembly: AssemblyProduct("Matriz_Preencher_e_Somar_Elementos")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // O GUID a seguir será destinado à ID de typelib se este projeto for exposto para COM
-[assembly: Guid("8f8484d5-7287-4534-8133-802fcf00886d")]
+[assembly: Guid("54dd1f38-e506-42db-ac69-39511fc35275")]
 
 // As informações da versão de um assembly consistem nos quatro valores a seguir:
 //
