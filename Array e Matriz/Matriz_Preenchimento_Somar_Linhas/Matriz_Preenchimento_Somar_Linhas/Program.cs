@@ -18,7 +18,7 @@ namespace Matriz_Preenchimento_Somar_Linhas_e_colunas
                 for (int coluna = 0; coluna < 3; coluna++)
                 {
                     matriz[linha, coluna] = rand.Next(15);
-                    Console.Write(matriz[linha, coluna]);
+                    Console.Write(matriz[linha , coluna] + " ");
                 }
                 Console.WriteLine(" ");
             }
