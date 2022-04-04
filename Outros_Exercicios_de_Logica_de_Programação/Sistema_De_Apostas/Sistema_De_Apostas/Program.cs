@@ -10,7 +10,11 @@ namespace Sistema_De_Apostas
     {
         static void Main(string[] args)
         {
-            Console.Write("Digite a Quandidades de Cartões: ");
+            string Sair;
+
+            do
+            {
+                Console.Write("Digite a Quandidades de Cartões: ");
             int QtdCartoes = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Digite a Quandidades de Numeros: ");
@@ -50,10 +54,7 @@ namespace Sistema_De_Apostas
 
 
 
-            string Sair;
-
-            do
-            {
+            
 
                 // Preenchimento da Matriz
                 Random rand = new Random();
