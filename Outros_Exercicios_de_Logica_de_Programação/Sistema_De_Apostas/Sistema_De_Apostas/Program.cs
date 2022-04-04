@@ -89,7 +89,7 @@ namespace Sistema_De_Apostas
                     }
                 }
 
-                Console.WriteLine($"---------------------------------------------\nNumeros Sorteados\n----------------------------------------------------");
+                Console.WriteLine($"---------------------------------------------\nNUMEROS SORTEADOS\n---------------------------------------------");
                 //Exibir Matriz Preenchida
                 for (Cartoes = 0; Cartoes < QtdCartoes; Cartoes++)
                 {
