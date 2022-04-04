@@ -28,7 +28,7 @@ namespace Sistema_De_Apostas
 
             int[,] matriz = new int[Cartoes, Numeros];
 
-            /* int apostados = (QtdCartoes * QtdNumeros);
+            int apostados = (QtdCartoes * QtdNumeros);
              int QtdApostados = 1;
              Console.Clear();
              for ( Cartoes = 0;  Cartoes < QtdCartoes;  Cartoes++)
@@ -41,7 +41,7 @@ namespace Sistema_De_Apostas
                      Console.Clear();
                  }
              }
-             Console.WriteLine($"------------------------------------------\nNumeros Apostados\n----------------------------------------------------");
+             Console.WriteLine($"---------------------------------------------\nNumeros Apostados\n---------------------------------------------");
              for (Cartoes = 0; Cartoes < QtdCartoes; Cartoes++)
              {
                  for (Numeros = 0; Numeros < QtdNumeros; Numeros++)
@@ -49,7 +49,7 @@ namespace Sistema_De_Apostas
                      Console.Write(matriz[Cartoes, Numeros] + " ");
                  }
                  Console.WriteLine();
-             } */
+             }
 
 
 
