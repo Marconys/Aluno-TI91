@@ -28,7 +28,9 @@ namespace Sistema_De_Apostas
 
             int[,] matriz = new int[Cartoes, Numeros];
 
-            int apostados = (QtdCartoes * QtdNumeros);
+                //Player escolhe seus numeros apostados
+
+            /*int apostados = (QtdCartoes * QtdNumeros);
              int QtdApostados = 1;
              Console.Clear();
              for ( Cartoes = 0;  Cartoes < QtdCartoes;  Cartoes++)
@@ -49,7 +51,7 @@ namespace Sistema_De_Apostas
                      Console.Write(matriz[Cartoes, Numeros] + " ");
                  }
                  Console.WriteLine();
-             }
+             } */
 
 
 
@@ -58,8 +60,6 @@ namespace Sistema_De_Apostas
 
                 // Preenchimento da Matriz
                 Random rand = new Random();
-
-
 
                 for (Cartoes = 0; Cartoes < QtdCartoes; Cartoes++)
                 {
@@ -91,7 +91,7 @@ namespace Sistema_De_Apostas
                 }
 
                 Console.WriteLine($"---------------------------------------------\nNUMEROS SORTEADOS\n---------------------------------------------");
-                //Exibir Matriz Preenchida
+                //Exibir Matriz Preenchida / Numéros sorteados
                 for (Cartoes = 0; Cartoes < QtdCartoes; Cartoes++)
                 {
                     for (Numeros = 0; Numeros < QtdNumeros; Numeros++)
