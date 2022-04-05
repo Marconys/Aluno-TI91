@@ -19,11 +19,8 @@ namespace Sistema_Lanchonete
             int i = 0;
             string Sair = "";
 
-
-
             Console.WriteLine("-----------------------------------\nCARDÁPIO\n-----------------------------------");
-
-            
+                       
 
 
             do
@@ -51,10 +48,7 @@ namespace Sistema_Lanchonete
             } while (Sair != "S" && Sair != "s");
             Console.WriteLine("-----------------------------------\nPEDIDO CONCLUÍDO\n-----------------------------------");
             Console.WriteLine("Você escolheu {0} unidade(s) de {1} Total R$ {2}",Quantidade,Produtos[i],Total.ToString("F2",CultureInfo.InvariantCulture));
-
-
-
-            
+                               
             
 
 
