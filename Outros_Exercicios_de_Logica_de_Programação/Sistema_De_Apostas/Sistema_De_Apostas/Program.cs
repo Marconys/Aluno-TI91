@@ -112,7 +112,7 @@ namespace Sistema_De_Apostas
 
             } while (Sair == "s" || Sair == "S");
 
-
+            Console.WriteLine("Jogo Finalizado");
 
             Console.ReadKey();
         }
