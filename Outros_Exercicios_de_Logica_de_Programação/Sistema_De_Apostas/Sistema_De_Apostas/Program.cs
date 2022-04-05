@@ -30,7 +30,7 @@ namespace Sistema_De_Apostas
 
                 //Player escolhe seus numeros apostados
 
-            /*int apostados = (QtdCartoes * QtdNumeros);
+           /* int apostados = (QtdCartoes * QtdNumeros);
              int QtdApostados = 1;
              Console.Clear();
              for ( Cartoes = 0;  Cartoes < QtdCartoes;  Cartoes++)
