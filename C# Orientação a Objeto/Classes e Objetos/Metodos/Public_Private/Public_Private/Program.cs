@@ -59,8 +59,8 @@ namespace Public_Private
         {
             Jogador J1 = new Jogador("Marconys");
 
+            
             J1.setenergia(120);
-            J1.setenergia(-30);
 
             Console.WriteLine("O Jogador {0} esta com  {1}% de enerigia",J1.nome,J1.getenergia());
 
