@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 public class Veiculo // Classe base
 {
-     public string tipo;
-     public int rodas;
+    public string tipo;
+    public int rodas;
     private bool ligado;
 
     public Veiculo()
@@ -27,7 +27,7 @@ public class Veiculo // Classe base
         
     }
 
-    public string getligado()
+    public string getligado() // metodo para visualizar o estado do carro uma vez que o atributo ligado foi criado como private
     {
         if (ligado)
         { 
@@ -49,13 +49,13 @@ public class Carro : Veiculo
 
     public Carro(string nome, string cor)
     {
-        Desligar();
+        Desligar(); // inicialisando o objeto "Carro desligado"
         this.nome = nome;
         this.cor = cor;
     }
 }
 
-namespace ConsoleApp1
+namespace Herança_De_classes
 {
     internal class Program
     {
