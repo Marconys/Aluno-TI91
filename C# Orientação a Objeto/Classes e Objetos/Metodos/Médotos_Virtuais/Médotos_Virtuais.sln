@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Médotos_Virtuais", "Médotos_Virtuais\Médotos_Virtuais.csproj", "{320E692E-BABE-4CBA-956B-271FAA55BBB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{320E692E-BABE-4CBA-956B-271FAA55BBB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{320E692E-BABE-4CBA-956B-271FAA55BBB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{320E692E-BABE-4CBA-956B-271FAA55BBB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{320E692E-BABE-4CBA-956B-271FAA55BBB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D1C9DAC-3FCA-4D1F-8AEA-32C90370FC31}
+	EndGlobalSection
+EndGlobal
