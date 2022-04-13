@@ -14,7 +14,7 @@ namespace Beecrowd_1011
             double pi = 3.14159;
             double  raio = Convert.ToDouble(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double volume = (4.0 / 3) * pi * raio * raio * raio;
+            double volume = (4.0 / 3) * pi * Math.Pow(raio, 3);
 
             Console.WriteLine("VOLUME = {0}", volume.ToString("F3", CultureInfo.InvariantCulture));
 
