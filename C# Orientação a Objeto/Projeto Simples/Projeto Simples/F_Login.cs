@@ -18,5 +18,26 @@ namespace Projeto_Simples
             InitializeComponent();
             form1 = f;
         }
+
+        private void btn_logar_Click(object sender, EventArgs e)
+        {
+            string username = tb_username.Text;
+            string senha = tb_senha.Text;
+
+            if (username == "" || senha == "")
+            {
+                MessageBox.Show("usuário ou senha inválidos");
+                tb_username.Focus();
+                return;
+            }
+
+            string mysql = "SELECT * FROM usuarios where";/// continua aqui;
+
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

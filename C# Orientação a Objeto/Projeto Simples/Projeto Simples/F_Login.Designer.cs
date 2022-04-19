@@ -77,6 +77,7 @@
             this.btn_logar.TabIndex = 4;
             this.btn_logar.Text = "Logar";
             this.btn_logar.UseVisualStyleBackColor = true;
+            this.btn_logar.Click += new System.EventHandler(this.btn_logar_Click);
             // 
             // btn_cancelar
             // 
@@ -86,8 +87,9 @@
             this.btn_cancelar.TabIndex = 5;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
-            // F_Log
+            // F_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,7 +103,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "F_Log";
+            this.Name = "F_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);

@@ -25,13 +25,13 @@ namespace Projeto_Simples
             return conexao;
         }
 
-        
+        // Método para consulta
         private static DataTable ObteterTodosusuarios()
         {
             MySqlDataAdapter da = null; // faz a consulta
             DataTable dt = new DataTable();
 
-            // Criando uma rotina
+            // Criando uma rotina de conexão de acesso
             using (var cmd = conexaoBanco().CreateCommand())
             {
                 cmd.CommandText = "SELECT * FROM usuarios";
@@ -50,6 +50,32 @@ namespace Projeto_Simples
                     throw ex;
                 }
            
+        }
+        // Método genérico para consulta
+        public static DataTable consulta(string mysql)
+        {
+            MySqlDataAdapter da = null; // faz a consulta
+            DataTable dt = new DataTable();
+
+            // Criando uma rotina de conexão de acesso
+            using (var cmd = conexaoBanco().CreateCommand())
+            {
+                cmd.CommandText = mysql;
+                da = new MySqlDataAdapter(cmd.CommandText, conexaoBanco());
+                da.Fill(dt); // preenche o DataTable
+                conexaoBanco().Close();
+
+                return dt;
+            }
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                conexaoBanco().Close();
+                throw ex;
+            }
         }
     }
 }
