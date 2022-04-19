@@ -19,6 +19,8 @@ namespace Projeto_SendSec
         public Form1()
         {
             InitializeComponent();
+
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,9 +37,11 @@ namespace Projeto_SendSec
 
         private void btn_EnviarEmail_Click(object sender, EventArgs e)
         {
-            Envio.EnviarEmail(tb_Email.Text, tb_Sendemail.Text);
+            Envio.EnviarEmail(tb_Email.Text,tb_Sendemail.Text);
 
             
+                                    
+                      
             
             
         }
@@ -45,6 +49,11 @@ namespace Projeto_SendSec
         private void btn_EnviarSms_Click(object sender, EventArgs e)
         {
             Envio.EnviarSms();
+        }
+
+        private void tb_membro_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

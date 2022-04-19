@@ -9,6 +9,7 @@ using System.Net;
 using System.Windows.Forms;
 
 
+
 namespace Projeto_SendSec
 {
     public class Envio : Form1
@@ -46,14 +47,16 @@ namespace Projeto_SendSec
                 smtpClient.EnableSsl = true;
                 smtpClient.Timeout = 60 * 60;
                 smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new NetworkCredential("sendsec1@gmail.com", "Sendsec2022");
+                smtpClient.Credentials = new NetworkCredential("sendsec1@gmail.com", "senha");
+
+                
 
                 emailCliet.From = new MailAddress("sendsec1@gmail.com", "SendTeste");
                 emailCliet.Body = menssagem;
-                emailCliet.Subject = "Alguma coisa";
+                emailCliet.Subject = "Testes Sendsec";
                 emailCliet.IsBodyHtml = true;
                 emailCliet.Priority = MailPriority.Normal;
-                emailCliet.To.Add(email);
+                emailCliet.To.Add(email);                
                 
 
                 smtpClient.Send(emailCliet);
@@ -69,6 +72,36 @@ namespace Projeto_SendSec
                 MessageBox.Show("Não foi possivel enviar a Mensagem");
             }
             
+
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // tb_Sendemail
+            // 
+            this.tb_Sendemail.Text = "";
+            this.tb_Sendemail.TextChanged += new System.EventHandler(this.tb_Sendemail_TextChanged);
+            // 
+            // Envio
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(812, 450);
+            this.Name = "Envio";
+            this.Load += new System.EventHandler(this.Envio_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        private void tb_Sendemail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Envio_Load(object sender, EventArgs e)
+        {
 
         }
     }
