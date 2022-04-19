@@ -50,7 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Banco.cs" />
-    <Compile Include="Classes\Envio.cs" />
+    <Compile Include="Classes\Envio.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
