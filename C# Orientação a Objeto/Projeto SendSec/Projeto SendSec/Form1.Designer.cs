@@ -35,8 +35,12 @@
             this.tb_Email = new System.Windows.Forms.TextBox();
             this.tb_Telefone = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_EnviarSms = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_WhatsApp = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_EnviarEmail
@@ -54,7 +58,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 27);
+            this.label2.Location = new System.Drawing.Point(61, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 3;
@@ -89,22 +93,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(284, 27);
+            this.label3.Location = new System.Drawing.Point(323, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Telefone";
-            // 
-            // btn_EnviarSms
-            // 
-            this.btn_EnviarSms.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EnviarSms.Location = new System.Drawing.Point(243, 344);
-            this.btn_EnviarSms.Name = "btn_EnviarSms";
-            this.btn_EnviarSms.Size = new System.Drawing.Size(164, 64);
-            this.btn_EnviarSms.TabIndex = 8;
-            this.btn_EnviarSms.Text = "Enviar SMS";
-            this.btn_EnviarSms.UseVisualStyleBackColor = true;
-            this.btn_EnviarSms.Click += new System.EventHandler(this.btn_EnviarSms_Click);
+            this.label3.Text = "WhatsApp";
             // 
             // label1
             // 
@@ -116,14 +109,47 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Menssagem";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Projeto_SendSec.Properties.Resources.Email_logo_png;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Projeto_SendSec.Properties.Resources.WhatsApp_png;
+            this.pictureBox2.Location = new System.Drawing.Point(287, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btn_WhatsApp
+            // 
+            this.btn_WhatsApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_WhatsApp.Location = new System.Drawing.Point(243, 344);
+            this.btn_WhatsApp.Name = "btn_WhatsApp";
+            this.btn_WhatsApp.Size = new System.Drawing.Size(164, 64);
+            this.btn_WhatsApp.TabIndex = 12;
+            this.btn_WhatsApp.Text = " Enviar\r\nWhatsApp";
+            this.btn_WhatsApp.UseVisualStyleBackColor = true;
+            this.btn_WhatsApp.Click += new System.EventHandler(this.btn_WhatsApp_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(435, 427);
+            this.ClientSize = new System.Drawing.Size(433, 427);
+            this.Controls.Add(this.btn_WhatsApp);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_EnviarSms);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tb_Telefone);
             this.Controls.Add(this.tb_Email);
@@ -135,6 +161,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SendSec -v1.0.0";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,8 +175,10 @@
         private System.Windows.Forms.TextBox tb_Telefone;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox tb_Sendemail;
-        private System.Windows.Forms.Button btn_EnviarSms;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btn_WhatsApp;
     }
 }
 

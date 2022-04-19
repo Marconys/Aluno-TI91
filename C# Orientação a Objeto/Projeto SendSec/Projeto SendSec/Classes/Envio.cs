@@ -14,6 +14,7 @@ namespace Projeto_SendSec
 {
     public class Envio : Form1
     {
+
         public static void EnviarSms()
         {
                         
@@ -47,7 +48,7 @@ namespace Projeto_SendSec
                 smtpClient.EnableSsl = true;
                 smtpClient.Timeout = 60 * 60;
                 smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new NetworkCredential("sendsec1@gmail.com", "senha");
+                smtpClient.Credentials = new NetworkCredential("sendsec1@gmail.com", "Sendtestes2022");
 
                 
 

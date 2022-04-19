@@ -55,5 +55,10 @@ namespace Projeto_SendSec
         {
 
         }
+
+        private void btn_WhatsApp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
