@@ -7,6 +7,7 @@ using System.IO;
 using System.Net.Mail;
 using System.Net;
 using System.Windows.Forms;
+using WhatsAppApi;
 
 
 
@@ -73,6 +74,39 @@ namespace Projeto_SendSec
                 MessageBox.Show("Não foi possivel enviar a Mensagem");
             }
             
+
+        }
+
+        public static void EnviarWhatsApp(string phoneCliente, string menssagem)
+        {
+            string from = "numero do telefone";
+            string to = phoneCliente;
+            string msg = menssagem;
+            WhatsApp wa = new WhatsApp(from,"senha", "SendSec", false, false);
+
+            // Conexão com manipulador de eventos
+
+            wa.OnConnectSuccess += () =>
+            {
+                MessageBox.Show("Conectado com o WhasApp...");
+
+                wa.OnLoginSuccess += (phoneNumber, data) =>
+                {
+                    wa.SendMessage(to,msg);
+                    MessageBox.Show("Menssagem Enviada");
+                };
+                wa.OnLoginFailed += (data) =>
+                {
+                    MessageBox.Show("Falha no Login");
+                };
+                wa.Login();
+            };
+            wa.OnConnectFailed += (ex) =>
+            {
+                MessageBox.Show("Falha na Conexão...");
+            };
+            wa.Connect();
+
 
         }
 

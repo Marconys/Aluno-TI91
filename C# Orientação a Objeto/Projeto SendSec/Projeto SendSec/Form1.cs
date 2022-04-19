@@ -44,20 +44,11 @@ namespace Projeto_SendSec
                       
             
             
-        }
-
-        private void btn_EnviarSms_Click(object sender, EventArgs e)
-        {
-            Envio.EnviarSms();
-        }
-
-        private void tb_membro_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        }       
 
         private void btn_WhatsApp_Click(object sender, EventArgs e)
         {
+            Envio.EnviarWhatsApp(tb_Telefone.Text, tb_Sendemail.Text);
 
         }
     }
