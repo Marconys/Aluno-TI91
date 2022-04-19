@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_membro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_EnviarEmail = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,13 +39,13 @@
             this.btn_EnviarSms = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tb_membro
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 23);
-            this.textBox1.MaxLength = 9;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 20);
-            this.textBox1.TabIndex = 0;
+            this.tb_membro.Location = new System.Drawing.Point(116, 23);
+            this.tb_membro.MaxLength = 9;
+            this.tb_membro.Name = "tb_membro";
+            this.tb_membro.Size = new System.Drawing.Size(120, 20);
+            this.tb_membro.TabIndex = 0;
             // 
             // label1
             // 
@@ -138,7 +138,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_EnviarEmail);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_membro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -151,7 +151,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_membro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_EnviarEmail;
         private System.Windows.Forms.Label label2;

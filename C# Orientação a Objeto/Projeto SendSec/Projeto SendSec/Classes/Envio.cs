@@ -36,7 +36,7 @@ namespace Projeto_SendSec
 
         }
 
-        public static void EnviarEmail(string email)
+        public static void EnviarEmail(string email, string menssagem)
         {
             MailMessage emailCliet = new MailMessage();
             
@@ -49,11 +49,12 @@ namespace Projeto_SendSec
                 smtpClient.Credentials = new NetworkCredential("sendsec1@gmail.com", "Sendsec2022");
 
                 emailCliet.From = new MailAddress("sendsec1@gmail.com", "SendTeste");
-                emailCliet.Body = "Olá testando testando";
+                emailCliet.Body = menssagem;
                 emailCliet.Subject = "Alguma coisa";
                 emailCliet.IsBodyHtml = true;
                 emailCliet.Priority = MailPriority.Normal;
                 emailCliet.To.Add(email);
+                
 
                 smtpClient.Send(emailCliet);
                 MessageBox.Show("Menssagem enviada com sucesso");

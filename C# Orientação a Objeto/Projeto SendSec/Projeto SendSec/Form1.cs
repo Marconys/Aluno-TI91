@@ -35,7 +35,9 @@ namespace Projeto_SendSec
 
         private void btn_EnviarEmail_Click(object sender, EventArgs e)
         {
-            Envio.EnviarEmail(tb_Email.Text);
+            Envio.EnviarEmail(tb_Email.Text, tb_Sendemail.Text);
+
+            
             
             
         }
