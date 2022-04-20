@@ -17,9 +17,9 @@ namespace Projeto_SendSec
     public class Envio : Form1
     {
 
-        public static void EnviarSms(string NumbPhone, string menssagem, string porta)
+        public static void EnviarSms(string NumbPhone, string menssagem)
         {
-                        
+            string porta = "COM1";
 
             try
             {
