@@ -10,31 +10,56 @@ using System.Windows.Forms;
 using WhatsAppApi;
 
 
-
+using System.IO.Ports;
+using System.Threading;
 namespace Projeto_SendSec
 {
     public class Envio : Form1
     {
 
-        public static void EnviarSms()
+        public static void EnviarSms(string NumbPhone, string menssagem, string porta)
         {
                         
 
             try
             {
-                WebClient enviosms = new WebClient();
+               SerialPort serialPort = new SerialPort();
+                serialPort.PortName = porta;
+                serialPort.Open();
 
-                Stream s = enviosms.OpenRead("Endreço da API");
-                StreamReader reader = new StreamReader(s);
-                String resultado = reader.ReadToEnd();
-                MessageBox.Show(resultado, " Envio de Menssagem ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                serialPort.WriteLine("AT" + Environment.NewLine);
+                Thread.Sleep(100);
+
+                serialPort.WriteLine("AT+CMGF =1" + Environment.NewLine);
+                Thread.Sleep(100);
+
+                serialPort.WriteLine("AT+CMGS =\"" +NumbPhone+ "\"" + Environment.NewLine);
+                Thread.Sleep(100);
+
+                serialPort.WriteLine(menssagem + Environment.NewLine);
+                Thread.Sleep(100);
+
+                serialPort.Write(new byte[] { 26 }, 0, 1);
+                Thread.Sleep(100);
+
+                var resposta = serialPort.ReadExisting();
+
+                if (resposta.Contains("ERROR"))
+                {
+                    MessageBox.Show("Falha no Envio", "Menssagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("menssagem Enviada", "Menssagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    serialPort.Close();
+                }
 
 
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message, "Erro no envio da Menssagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Erro no envio da Menssagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
